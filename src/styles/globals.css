@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.carousal {
+  /* animation: infinite-scroll 20s linear forwards infinite; */
+  overflow-x: hidden;
+  display: flex;
+  white-space: nowrap;
+}
+
+.carousal-track{
+    width: 100%;
+}
+
+
+.carousal .carousal-track {
+  display: flex;
+  animation: infinite-scroll 4s linear infinite;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-200%);
+  }
+}
